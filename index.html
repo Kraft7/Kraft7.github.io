@@ -1,58 +1,32 @@
 <html>
    <head>
       <meta charset="UTF-8">
-      <title>Testing</title>
+      <title>Calculators</title>
    </head>
-   <script>
-      function calculate() {
-				document.getElementById("hiddenText").innerHTML = "";
-
-        var x; var y;
-        year = document.getElementById("year").value;
-        month = document.getElementById("month").value;
-      	cooldown = document.getElementById("cooldown").value;
-
-      	if (cooldown == "" || month == "" || year == "") {
-      		document.getElementById("hiddenText").innerHTML = "Please enter all the feilds.";
-      	}
-
-      	//else if(cooldown < 0 || cooldown > 20) {
-      	// document.getElementById("error").innerHTML = "The cooldown must be between 0 and 20 days!";
-      	//}
-
-      	else if (year == 14 && month > 1) {
-      		document.getElementById("hiddenText").innerHTML = "Lioness cannot breed past 14 years!";
-      	}
-
-      	//else if (month < 0 || month > 11) {
-      	//	document.getElementById("hiddenText").innerHTML = "Please enter a month between 1 and 11!";
-      	//}
-
-      	else {
-      	month + cooldown;
-      	while (cooldown > 0) {
-      		month++; cooldown--;
-      			if (month == 12) {
-      				year++; month = 0;
-      			}
-      		}
-      		if (year >= 14 && month >= 1) {
-      			document.getElementById("hiddenText").innerHTML = "Your lioness will be: " + year + " years and " + month + " months, but unfortunately this will be too old to breed :(";
-      		}
-
-      		else {
-      		document.getElementById("hiddenText").innerHTML = "Your lioness will be: " + year + " years and " + month + " months";
-      	}
-      }
-      }
-   </script>
+   <script src="JS/NextHeatCalc.js"></script>
+   <script src="JS/HeatsLeftCalc.js"></script>
+   <link rel="stylesheet" type="text/css" href="CSS/CSS.css" />
    <body>
-      Year: <input type="number" id="year" min="2" max ="14">
-      Month: <input type="number" id="month" min="0" max ="11">
-      Cooldown: <input type="number" id="cooldown" min="0" max ="20"><br><br>
-      <button onclick="calculate()">Go!</button>
-      <p id="error"></p>
-      <br><br>
-      <p id="hiddenText"></p>
+     <div class="container">
+       <div class="lionessInfo">
+       <h2>Lioness Information</h2>
+       <p>My lioness is <input type="number" id="year" min="2" max ="14"> years &
+       <input type="number" id="month" min="0" max ="11"> months.</p><br>
+
+       Cooldown: <input type="number" id="cooldown" min="0" max ="20"><br><br>
+     </div>
+     <div class="heatCalc">
+       <h2>Next Heat Calculator</h2>
+         <button onclick="calculateHeat()">Go!</button>
+         <br><br>
+         <p id="hiddenText"></p>
+     </div>
+     <div class="lifetimeCalc">
+       <h2>Lifetime Breedings Calculator</h2>
+        <button onclick="lifetimeCalc()">Go!</button>
+        <br><br>
+        <p id="hiddenText2"></p>
+     </div>
+   </div>
    </body>
 </html>
