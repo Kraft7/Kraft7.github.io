@@ -8,7 +8,7 @@ p {
   font-family: 'Montserrat', sans-serif;
 }
 
-.footer p {
+.foot p {
   font-size: 10px;
 }
 
@@ -33,7 +33,7 @@ p {
   grid-column: 4/6;
 }
 
-.footer {
+.foot {
   grid-row: 3/4;
   grid-column: 2/6;
   margin-top: 5%;
