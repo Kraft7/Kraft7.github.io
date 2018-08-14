@@ -1,6 +1,4 @@
 function lifetimeCalc() {
-  document.getElementById("hiddenText2").innerHTML = "Hello World";
-
   years = document.getElementById("year").value;
   months = document.getElementById("month").value;
   cooldowns = document.getElementById("cooldown").value;
@@ -38,7 +36,7 @@ function lifetimeCalc() {
         }
         else {
           heats++;
-          cooldowns = 20;
+          cooldowns = 23;
         }
     }
   }
