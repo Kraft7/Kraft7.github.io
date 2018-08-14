@@ -18,6 +18,12 @@ p {
   grid-template-rows:  1fr auto auto auto auto 1fr;
 }
 
+.foot {
+  grid-row: 3/4;
+  grid-column: 2/6;
+  margin-top: 5%;
+}
+
 .lionessInfo {
   grid-row: 1/2;
   grid-column: 2/6;
@@ -31,10 +37,4 @@ p {
 .lifetimeCalc {
   grid-row: 2/3;
   grid-column: 4/6;
-}
-
-.foot {
-  grid-row: 3/4;
-  grid-column: 2/6;
-  margin-top: 5%;
 }
