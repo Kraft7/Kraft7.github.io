@@ -36,7 +36,12 @@ function lifetimeCalc() {
         }
         else {
           heats++;
+          if (document.getElementById("IBF").checked == true){
+            cooldowns = 20;
+          }
+          else {
           cooldowns = 23;
+          }
         }
     }
   }
