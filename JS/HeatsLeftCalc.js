@@ -24,7 +24,7 @@ function lifetimeCalc() {
           }
         }
         if (years >= 14 && months >= 1) {
-          document.getElementById("hiddenText2").innerHTML = "Your lioness has " + heats + " left.";
+          document.getElementById("hiddenText2").innerHTML = "Your lioness has " + heats + " heat(s) left.";
           i = false;
         }
         else {
